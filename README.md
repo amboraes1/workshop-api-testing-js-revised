@@ -91,7 +91,7 @@ En esta parte se creará un proyecto node desde 0 y se configurará la primera p
 1. Instalar la dependencia de desarrollo mocha, chai
 
    ```sh
-   npm install --save-dev mocha chai
+   npm install --save-dev mocha chai@4.4.0
    ```
 
 1. Crear el archivo `HelloWord.test.js` dentro de una carpeta test y utilizar el siguiente codigo como contenido
@@ -340,6 +340,7 @@ En esta sesión se automatizarán algunas pruebas utilizando métodos GET de la 
 1. Descargue el repositorio en un zip y compruebe que descargó de forma adecuada. Aproveche la hypermedia de las anteriores respuesta para formar la url de descarga
 1. Obtenga la lista de archivos del repositorio y encuentre el Archivo README.md compruebe su nombre, path y su sha. Use el método containtSubset de chai-subset
 1. Por último, descargue el archivo README.md con ayuda del hypermedia y compruebe su md5
+1. Subir los cambios a GitHub, crear un PR y solicitar la revisión
 
 ### Consumiendo Métodos PUT
 
@@ -349,6 +350,7 @@ En esta sesión seguiremos a un usuario de github, comprobaremos que efectivamen
 1. Seguir al usuario aperdomob consumiendo con el método PUT la url <https://api.github.com/user/following/aperdomob.> Verificar que la consulta devuelve un 204 y que efectivamente el cuerpo venga vacío
 1. Consulte la lista de usuario y verifique que efectivamente sigue a aperdomob, puede consumir <https://api.github.com/user/following>
 1. Vuelva a llamar el endpoint para seguir al usuario aperdomob y verifique la idempotencia del método
+1. Subir los cambios a GitHub, crear un PR y solicitar la revisión
 
 ### Consumiendo métodos POST y PATCH
 
@@ -359,6 +361,7 @@ En esta sesión crearemos un issue in github con un título, posteriormente modi
 1. Obtendremos la lista de todos los repositorios como ya lo habíamos hecho anteriormente. De todos los repositorios seleccionaremos uno cualquiera y agregamos una verificación que el repositorio exista.
 1. A partir del usuario y el nombre del repositorio construimos la url que nos permita crear un issue que contenga solamente un título mediante un método POST la estructura de la url es `https://api.github.com/repos/${username}/${repositoryName}/issues`. Verificamos que el título corresponda y que el cuerpo no contenga contenido
 1. Modifique el issue agregandole un cuerpo mediante un método PATCH la url usando la url `https://api.github.com/repos/${username}/${repositoryName}/issues/{issueNumber}` verifique que el título no haya cambiado y que contenga el nuevo cuerpo
+1. Subir los cambios a GitHub, crear un PR y solicitar la revisión
 
 ### Consumiendo un DELETE y un recurso inexistente
 
@@ -369,6 +372,7 @@ Se creará un gist posteriormente se verificará que exista. Luego se eliminará
 1. Consulte el gist creado mediante la url provisionada por hypermedia y compruebe que el recurso si exista
 1. Elimine el gist mediante la misma url usando el método **DELETE**
 1. Consulte nuevamente el gist mediante la url y compruebe que el recurso ya no exista
+1. Subir los cambios a GitHub, crear un PR y solicitar la revisión
 
 ### Consumiendo HEAD y redireccionando peticiones
 
@@ -377,6 +381,8 @@ se consumirá por medio de un **HEAD** un repositorio el cual fue cambiado de no
 1. Crear el archivo `GithubApi.Redirect.test.js` y dentro de dentro de este, codificar los cambios necesarios para los pasos siguientes
 1. Consultar con el método `HEAD` la url `https://github.com/aperdomob/redirect-test` y comprobar que tenga la redirección a la url `https://github.com/aperdomob/new-redirect-test`
 1. Consultar con el método GET la url <https://github.com/aperdomob/redirect-test> y verificar que redireccione de forma correcta
+1. Subir los cambios a GitHub, crear un PR y solicitar la revisión
+   
 ### Query parameters
 
 En esta sesión se enviará query parameters para poder obtener más o menos cantidad de datos en una consulta **GET**.
@@ -384,6 +390,7 @@ En esta sesión se enviará query parameters para poder obtener más o menos can
 1. Modificar el archivo `GithubApi.Users.test.js` agregando una prueba de cuantos usuarios trae por defecto.
 1. Agregar una prueba que obtenga 10 usuarios y verificar que efectivamente traiga 10 usuarios.
 1. Agregar una prueba que obtenga 100 usuarios y verificar que efectivamente traiga 100 usuarios.
+1. Subir los cambios a GitHub, crear un PR y solicitar la revisión
 
 ### Validación de Esquemas
 
@@ -428,6 +435,7 @@ En muchas ocasiones debemos verificar que la respuesta que entrega debe cumplir 
     ````
 
 1. Completar el archivo ListPublicEvents con el esquema que cubra cada una de los keys del json de respuesta, tenga en cuenta tipos de datos (numeros, booleanos, arrays, string, objects), enumeraciones
+1. Subir los cambios a GitHub, crear un PR y solicitar la revisión
 
 ### Librería Alterna de Clientes
 
