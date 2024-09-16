@@ -52,7 +52,8 @@ En esta primera parte se creará un repositorio y se realizaran las configuracio
 1. Proteger la rama `main` para que los pull request requieran revisión de otros desarrolladores y se compruebe el estado de nuestros test ("ok" :heavy_check_mark: o "fallaron" :x:) antes de hacer un merge a la rama.
 
     Ir a Settings > Branches adicionamos una regla dando click en **add rule**. Escribimos `main` en el campo de **branch name pattern**. Una vez hecho eso, damos click en las siguientes opciones:
-    ![branch rules](media/branch_protection_configuration.png)
+    <img width="808" alt="image" src="https://github.com/user-attachments/assets/dab34001-b4a1-46d9-bbb1-fc87975dfbed">
+
 
 1. Dentro del menu colaboradores agregar a:
    * [holgiosalos](https://github.com/holgiosalos)
